@@ -1,0 +1,20 @@
+{
+  "name": "sass-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Responsive landing page for a fictional bike repair shop, built with semantic HTML and SASS",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass scss/main.scss css/main.css --no-source-map",
+    "watch": "sass --watch scss/main.scss css/main.css",
+    "dev": "npm run sass && npx --yes serve .",
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "jsdom": "^31.0.1",
+    "sass": "^1.108.2"
+  }
+}
