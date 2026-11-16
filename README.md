@@ -47,6 +47,17 @@ A few examples of what is used:
 - Smooth scrolling is turned off for people who prefer reduced motion
 - Without JavaScript the menu is always visible and the FAQ still opens
 
+## Lighthouse
+
+Measured on the live demo on 16 November 2026 with Lighthouse 13.6 (headless Chrome):
+
+| Run     | Performance | Accessibility | Best practices | SEO |
+| ------- | ----------- | ------------- | -------------- | --- |
+| Mobile  | 100         | 100           | 100            | 100 |
+| Desktop | 100         | 100           | 100            | 100 |
+
+Scores can move a little between runs and machines.
+
 ## Tech
 
 - HTML5
