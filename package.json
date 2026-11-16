@@ -10,7 +10,7 @@
     "dev": "npm run sass && npx --yes serve .",
     "build": "node scripts/build.mjs",
     "test": "node --test",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist --dotfiles"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",

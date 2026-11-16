@@ -13,4 +13,9 @@ for (const path of ['index.html', 'js', 'images']) {
   cpSync(path, `dist/${path}`, { recursive: true })
 }
 
+// .nojekyll stops GitHub Pages running Jekyll. The empty .gitignore replaces
+// the main branch one on gh-pages, which would otherwise ignore css/.
+writeFileSync('dist/.nojekyll', '')
+writeFileSync('dist/.gitignore', '# Built files: nothing is ignored here.\n')
+
 console.log(`Built dist/ (CSS ${(css.length / 1024).toFixed(1)} kB)`)
