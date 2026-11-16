@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// space('m') -> 1.25rem
+@function space($size) {
+  @if not map.has-key($space, $size) {
+    @error 'Unknown space size `#{$size}`.';
+  }
+  @return map.get($space, $size);
+}

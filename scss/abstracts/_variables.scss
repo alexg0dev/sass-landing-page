@@ -1,0 +1,37 @@
+// Colour palette
+$color-ink: #1d2327;
+$color-ink-soft: #4a545c;
+$color-paper: #fbfaf7;
+$color-white: #ffffff;
+$color-line: #e2ded6;
+$color-brand: #22543d;      // deep green
+$color-brand-dark: #173a2a;
+$color-accent: #e0a526;     // warm yellow, used sparingly
+$color-tint: #eef3ef;
+
+// Type
+$font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-heading: Georgia, 'Times New Roman', serif;
+$line-height: 1.6;
+
+// Spacing scale (rem)
+$space: (
+  'xs': 0.5rem,
+  's': 0.75rem,
+  'm': 1.25rem,
+  'l': 2rem,
+  'xl': 3.5rem,
+  'xxl': 5.5rem
+);
+
+// Layout
+$container-width: 72rem;
+$radius: 10px;
+$shadow: 0 1px 2px rgba(29, 35, 39, 0.06), 0 4px 12px rgba(29, 35, 39, 0.06);
+
+// Breakpoints
+$breakpoints: (
+  'small': 36em,
+  'medium': 48em,
+  'large': 64em
+);
