@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spoke &amp; Chain: bike servicing and repairs in Bury</title>
+  <meta name="description" content="Spoke &amp; Chain is a bike repair workshop. Book a service, get a puncture fixed while you wait, or drop off your bike for a full overhaul. A demo landing page.">
+  <link rel="canonical" href="https://alexg0dev.github.io/sass-landing-page/">
+  <meta name="theme-color" content="#22543d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spoke &amp; Chain bike repairs">
+  <meta property="og:description" content="Bike servicing and repairs, with clear prices. A demo landing page built with HTML and SASS.">
+  <meta property="og:url" content="https://alexg0dev.github.io/sass-landing-page/">
+  <meta property="og:image" content="https://alexg0dev.github.io/sass-landing-page/images/screenshot.png">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="#top" aria-label="Spoke and Chain, back to top">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <circle cx="16" cy="16" r="12"/><circle cx="16" cy="16" r="3"/>
+          <path d="M16 4v9M16 19v9M4 16h9M19 16h9"/>
+        </svg>
+        Spoke &amp; Chain
+      </a>
+      <nav class="nav" aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+          Menu
+        </button>
+        <ul class="nav__list" id="nav-list">
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#how">How it works</a></li>
+          <li><a class="nav__link" href="#pricing">Prices</a></li>
+          <li><a class="nav__link" href="#faq">FAQ</a></li>
+          <li><a class="button" href="#book">Book a service</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div>
+          <h1 id="hero-title">Bike repairs without the guesswork</h1>
+          <p class="hero__lead">Book a slot online, drop your bike off, and we tell you the price before we start. Small jobs are usually done the same day.</p>
+          <div class="hero__actions">
+            <a class="button" href="#book">Book a service</a>
+            <a class="button button--outline" href="#pricing">See prices</a>
+          </div>
+          <ul class="hero__facts">
+            <li>Fixed prices</li>
+            <li>Parts quoted first</li>
+            <li>Open six days a week</li>
+          </ul>
+        </div>
+        <div class="hero__art">
+          <svg viewBox="0 0 260 170" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Line drawing of a bicycle">
+            <circle cx="60" cy="115" r="42"/>
+            <circle cx="200" cy="115" r="42"/>
+            <circle cx="60" cy="115" r="4" fill="currentColor"/>
+            <circle cx="200" cy="115" r="4" fill="currentColor"/>
+            <path d="M60 115 L120 115 L100 55 Z"/>
+            <path d="M100 55 L178 55 L120 115"/>
+            <path d="M178 55 L200 115"/>
+            <path d="M174 40 L178 55"/>
+            <path d="M164 38 H188"/>
+            <path d="M86 47 H114"/>
+            <circle cx="120" cy="115" r="9"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Services</p>
+          <h2 id="services-title">What we can do for your bike</h2>
+          <p class="section__intro">From a quick puncture fix to a full strip-down, every job starts with a free check and a written quote.</p>
+        </header>
+        <div class="card-grid">
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v6.5M12 14.5V21M3 12h6.5M14.5 12H21"/>
+            </svg>
+            <h3>Punctures and tyres</h3>
+            <p class="card__text">Inner tubes, tubeless repairs and new tyres fitted, usually while you wait.</p>
+            <p class="card__price">From £12</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7.5" stroke-width="3" stroke-dasharray="3 2.9"/>
+            </svg>
+            <h3>Gears and chains</h3>
+            <p class="card__text">Indexing, cable swaps and worn chains or cassettes replaced so shifting feels crisp again.</p>
+            <p class="card__price">From £20</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/>
+            </svg>
+            <h3>Brakes</h3>
+            <p class="card__text">Pads, cables and hydraulic bleeds. Every brake job ends with a road test.</p>
+            <p class="card__price">From £15</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+            </svg>
+            <h3>Full servicing</h3>
+            <p class="card__text">A clean, check and adjust of everything, from bearings to bar tape. See the plans below.</p>
+            <p class="card__price">From £45</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">How it works</p>
+          <h2 id="how-title">Three steps, no surprises</h2>
+        </header>
+        <ol class="steps">
+          <li class="steps__item">
+            <h3>Book a slot</h3>
+            <p class="steps__text">Pick a drop-off time with the form below. Tell us what is wrong and we will set aside the right amount of time.</p>
+          </li>
+          <li class="steps__item">
+            <h3>Get a quote</h3>
+            <p class="steps__text">We check the bike and text you a price. Nothing extra gets done unless you say yes.</p>
+          </li>
+          <li class="steps__item">
+            <h3>Ride away</h3>
+            <p class="steps__text">We let you know when it is ready. Pay when you collect, by card or cash.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Prices</p>
+          <h2 id="pricing-title">Service plans</h2>
+          <p class="section__intro">Labour prices. Any parts are quoted separately before we fit them.</p>
+        </header>
+        <div class="pricing">
+          <article class="pricing__plan" aria-labelledby="plan-basic">
+            <h3 id="plan-basic">Safety check</h3>
+            <p class="pricing__price">£25</p>
+            <ul class="pricing__list">
+              <li>Brakes adjusted</li>
+              <li>Gears adjusted</li>
+              <li>Tyres checked and pumped</li>
+              <li>Chain cleaned and oiled</li>
+            </ul>
+            <a class="button button--outline button--block" href="#book">Book a safety check</a>
+          </article>
+          <article class="pricing__plan pricing__plan--featured" aria-labelledby="plan-standard">
+            <span class="pricing__badge">Most booked</span>
+            <h3 id="plan-standard">Standard service</h3>
+            <p class="pricing__price">£45</p>
+            <ul class="pricing__list">
+              <li>Everything in the safety check</li>
+              <li>Drivetrain degreased</li>
+              <li>Wheels trued</li>
+              <li>Headset and bottom bracket checked</li>
+            </ul>
+            <a class="button button--block" href="#book">Book a standard service</a>
+          </article>
+          <article class="pricing__plan" aria-labelledby="plan-full">
+            <h3 id="plan-full">Full overhaul</h3>
+            <p class="pricing__price">£95</p>
+            <ul class="pricing__list">
+              <li>Everything in the standard service</li>
+              <li>Bike stripped and deep cleaned</li>
+              <li>Bearings regreased</li>
+              <li>New cables fitted</li>
+            </ul>
+            <a class="button button--outline button--block" href="#book">Book a full overhaul</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">FAQ</p>
+          <h2 id="faq-title">Common questions</h2>
+        </header>
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__question">How long will my bike be with you?</summary>
+            <div class="faq__answer"><p>Punctures and small adjustments are usually done the same day. Services take one to two working days, depending on parts.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Do you work on electric bikes?</summary>
+            <div class="faq__answer"><p>Yes, for brakes, gears, wheels and tyres. We do not repair motors or batteries.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Can I bring my own parts?</summary>
+            <div class="faq__answer"><p>You can. We charge the normal labour price and check the parts are compatible before fitting them.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">What if the quote is more than I want to spend?</summary>
+            <div class="faq__answer"><p>Just say no. The check is free, and we will tell you which jobs matter most for safety.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="book" aria-labelledby="book-title">
+      <div class="container visit">
+        <div>
+          <header class="section__header">
+            <p class="section__eyebrow">Visit us</p>
+            <h2 id="book-title">Book a service</h2>
+            <p class="section__intro">Send the form and we will reply with a drop-off time.</p>
+          </header>
+          <address class="visit__details">
+            <p>14 Mill Lane, Bury<br>
+            Phone: <a href="tel:+441614960000">0161 496 0000</a></p>
+          </address>
+          <table class="visit__hours">
+            <caption>Opening hours</caption>
+            <tbody>
+              <tr><th scope="row">Monday to Friday</th><td>8:30am to 6pm</td></tr>
+              <tr><th scope="row">Saturday</th><td>9am to 4pm</td></tr>
+              <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="visit__form">
+          <form class="form" id="booking-form" novalidate>
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="name">Name</label>
+                <input class="form__input" id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="phone">Phone</label>
+                <input class="form__input" id="phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="email">Email <span class="form__optional">(optional)</span></label>
+              <input class="form__input" id="email" name="email" type="email" autocomplete="email">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="plan">Service</label>
+              <select class="form__input" id="plan" name="plan">
+                <option>Not sure yet</option>
+                <option>Puncture or tyre</option>
+                <option>Safety check</option>
+                <option>Standard service</option>
+                <option>Full overhaul</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="details">What needs doing? <span class="form__optional">(optional)</span></label>
+              <textarea class="form__input" id="details" name="details" rows="4"></textarea>
+            </div>
+            <button class="button button--block" type="submit">Send booking request</button>
+            <p class="form__note">This is a demo page, so the form does not send anything.</p>
+            <p class="form__message" id="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>Spoke &amp; Chain is a made-up business. This page is a front end demo by <a href="https://github.com/alexg0dev">Alexandro Ghanem</a>.</p>
+      <p><a href="https://github.com/alexg0dev/sass-landing-page">Source on GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
