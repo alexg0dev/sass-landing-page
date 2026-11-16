@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: space('xs');
+  padding: 0.8rem 1.4rem;
+  border: 2px solid $color-brand;
+  border-radius: $radius;
+  background: $color-brand;
+  color: $color-white;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    border-color: $color-brand-dark;
+    background: $color-brand-dark;
+    color: $color-white;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  &--outline {
+    background: transparent;
+    color: $color-brand;
+
+    &:hover {
+      background: $color-brand;
+    }
+  }
+
+  &--block {
+    width: 100%;
+  }
+}

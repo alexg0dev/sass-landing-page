@@ -1,0 +1,67 @@
+@use '../abstracts' as *;
+
+.form {
+  display: grid;
+  gap: space('m');
+
+  &__row {
+    display: grid;
+    gap: space('m');
+
+    @include from('small') {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__field {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  &__optional {
+    font-weight: 400;
+    color: $color-ink-soft;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid #b9b3a8;
+    border-radius: $radius;
+    background: $color-white;
+    color: $color-ink;
+
+    &:focus-visible {
+      @include focus-ring($color-brand);
+      outline-offset: 0;
+    }
+
+    &:user-invalid {
+      border-color: #a3341f;
+    }
+  }
+
+  &__note {
+    margin: 0;
+    font-size: 0.9rem;
+    color: $color-ink-soft;
+  }
+
+  &__message {
+    margin: 0;
+    padding: space('s') space('m');
+    border-radius: $radius;
+    background: $color-tint;
+    color: $color-brand-dark;
+    font-weight: 600;
+
+    &:empty {
+      display: none;
+    }
+  }
+}

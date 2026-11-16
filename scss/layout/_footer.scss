@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.site-footer {
+  padding-block: space('l');
+  background: $color-ink;
+  color: rgba($color-white, 0.8);
+  font-size: 0.95rem;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: space('s');
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $color-white;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

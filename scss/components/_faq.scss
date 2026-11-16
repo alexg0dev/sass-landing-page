@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+.faq {
+  max-width: 46rem;
+  border-top: 1px solid $color-line;
+
+  &__item {
+    border-bottom: 1px solid $color-line;
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: space('m');
+    padding: space('m') 0;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    // Plus sign that turns into a minus when open.
+    &::after {
+      content: '+';
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: $color-brand;
+    }
+
+    .faq__item[open] &::after {
+      content: '\2212';
+    }
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+  }
+
+  &__answer {
+    padding-bottom: space('m');
+    color: $color-ink-soft;
+
+    p {
+      margin: 0;
+    }
+  }
+}

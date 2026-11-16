@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: space('l') space('m');
+  border: 1px solid $color-line;
+  border-radius: $radius;
+  background: $color-white;
+  box-shadow: $shadow;
+
+  &__icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: space('m');
+    padding: 0.55rem;
+    border-radius: 50%;
+    background: $color-tint;
+    color: $color-brand;
+  }
+
+  &__text {
+    flex: 1;
+    color: $color-ink-soft;
+  }
+
+  &__price {
+    margin: 0;
+    font-weight: 700;
+    color: $color-ink;
+  }
+}
+
+.card-grid {
+  display: grid;
+  gap: space('m');
+
+  @include from('small') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include from('large') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

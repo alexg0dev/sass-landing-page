@@ -1,0 +1,114 @@
+@use '../abstracts' as *;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid $color-line;
+  background: rgba($color-paper, 0.96);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4.25rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: space('xs');
+    font-family: $font-heading;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $color-ink;
+    text-decoration: none;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      color: $color-brand;
+    }
+  }
+}
+
+.nav {
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: space('xs');
+    padding: space('xs') space('s');
+    border: 1px solid $color-line;
+    border-radius: $radius;
+    background: $color-white;
+    color: $color-ink;
+    cursor: pointer;
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+
+    @include from('medium') {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    // Mobile: drop-down panel under the header when opened.
+    .nav--open & {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: grid;
+      padding: space('s') 1.25rem space('m');
+      border-bottom: 1px solid $color-line;
+      background: $color-paper;
+      box-shadow: $shadow;
+    }
+
+    @include from('medium') {
+      .nav--open &,
+      & {
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: space('l');
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        background: none;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: space('xs') 0;
+    color: $color-ink;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-brand;
+    }
+  }
+
+  // Without JavaScript the menu is always shown, so nothing is hidden away.
+  .no-js & {
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 space('m');
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+.container {
+  width: min(100% - 2.5rem, $container-width);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: space('xl');
+
+  @include from('medium') {
+    padding-block: space('xxl');
+  }
+
+  &--tint {
+    background: $color-tint;
+  }
+
+  &__header {
+    max-width: 40rem;
+    margin-bottom: space('l');
+  }
+
+  &__eyebrow {
+    margin-bottom: space('xs');
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-brand;
+  }
+
+  &__intro {
+    color: $color-ink-soft;
+    font-size: 1.125rem;
+  }
+}
+
+.skip-link {
+  @include visually-hidden;
+
+  &:focus {
+    position: fixed;
+    top: space('s');
+    left: space('s');
+    z-index: 100;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: space('xs') space('s');
+    clip: auto;
+    background: $color-white;
+    color: $color-ink;
+    border-radius: $radius;
+    box-shadow: $shadow;
+  }
+}
