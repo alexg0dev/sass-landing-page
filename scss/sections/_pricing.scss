@@ -1,0 +1,67 @@
+@use '../abstracts' as *;
+
+.pricing {
+  display: grid;
+  gap: space('m');
+
+  @include from('medium') {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+
+  &__plan {
+    padding: space('l') space('m');
+    border: 1px solid $color-line;
+    border-radius: $radius;
+    background: $color-white;
+
+    &--featured {
+      border: 2px solid $color-brand;
+      box-shadow: $shadow;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    margin-bottom: space('s');
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: $color-accent;
+    color: $color-ink;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  &__price {
+    margin-bottom: space('m');
+    font-family: $font-heading;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__list {
+    margin: 0 0 space('l');
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding: 0.35rem 0 0.35rem 1.6rem;
+      border-bottom: 1px solid $color-line;
+      color: $color-ink-soft;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0.85rem;
+        left: 0.2rem;
+        width: 0.7rem;
+        height: 0.4rem;
+        border-left: 2px solid $color-brand;
+        border-bottom: 2px solid $color-brand;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

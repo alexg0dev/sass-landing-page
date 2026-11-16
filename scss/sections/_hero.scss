@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+
+.hero {
+  padding-block: space('xl');
+  border-bottom: 1px solid $color-line;
+
+  @include from('medium') {
+    padding-block: space('xxl');
+  }
+
+  &__inner {
+    display: grid;
+    gap: space('l');
+    align-items: center;
+
+    @include from('medium') {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: space('xl');
+    }
+  }
+
+  &__lead {
+    max-width: 34rem;
+    font-size: 1.2rem;
+    color: $color-ink-soft;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: space('s');
+    margin-bottom: space('m');
+  }
+
+  &__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: space('xs') space('m');
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.95rem;
+    color: $color-ink-soft;
+
+    li::before {
+      content: '';
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+      background: $color-accent;
+      vertical-align: 0.1em;
+    }
+  }
+
+  &__art {
+    padding: space('l');
+    border-radius: $radius * 2;
+    background: $color-tint;
+    color: $color-brand;
+  }
+}

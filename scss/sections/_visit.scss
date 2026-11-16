@@ -1,0 +1,55 @@
+@use '../abstracts' as *;
+
+.visit {
+  display: grid;
+  gap: space('xl');
+
+  @include from('large') {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  &__details {
+    font-style: normal;
+  }
+
+  &__hours {
+    width: 100%;
+    max-width: 24rem;
+    margin-bottom: space('l');
+    border-collapse: collapse;
+
+    caption {
+      margin-bottom: space('xs');
+      font-weight: 700;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid $color-line;
+      text-align: left;
+    }
+
+    th {
+      font-weight: 500;
+    }
+
+    td {
+      text-align: right;
+      color: $color-ink-soft;
+    }
+  }
+
+  &__form {
+    padding: space('l') space('m');
+    border: 1px solid $color-line;
+    border-radius: $radius;
+    background: $color-white;
+    box-shadow: $shadow;
+
+    @include from('small') {
+      padding: space('l');
+    }
+  }
+}

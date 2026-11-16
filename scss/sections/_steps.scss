@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+.steps {
+  display: grid;
+  gap: space('l');
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+
+  @include from('medium') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    counter-increment: step;
+
+    &::before {
+      content: counter(step);
+      display: grid;
+      place-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-bottom: space('s');
+      border-radius: 50%;
+      background: $color-brand;
+      color: $color-white;
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    color: $color-ink-soft;
+  }
+}
